@@ -54,60 +54,41 @@
 // ['word', 'another_word']
 
 // uncomment lines 57 - 66 for this to work
-// var longestWord = "";
-// var stringArr = str.split(" ");
 
-// stringArr.forEach(function(word) {
-//   if (word.length > longestWord.length) {
-//   longestWord = word;
+
+
+
+// function longestWord (str) {
+//   var indStr = str.split(" ");
+//   var output = 0;
+//   var indexValue;
+//   for(var i = 0; i < indStr.length; i++) {
+//     if(indStr[i].length > output ) {
+//       output = indStr[i].length;
+//       indexValue = i;
+//     }
 //   }
-// });
-
-// console.log("The longest word in the the sentence is: " +longestWord);
-// compare length of var word to var longestWord
-// if word.length > longestWord.length set longestWord == word
-// return longestWord
-
-// uncomment lines 72 & 73 for this to work
+//   return indStr[indexValue];
 // }
-// getLongestWord(words);
+// console.log(longestWord("This sentence is long."));
+
+
 
 // ----------- P R O B L E M 3 -----------
 
 // Refactor the `longestWord` function so that it ignores punctuation.
 
-
-// ----------- P R O B L E M 4 -----------
-// Define a function called `factorial` that takes a random number as an argument and then returns the factorial of that given number.
-
-
-function factorial(num) {
-  var total = Math.random;
-  for (var i = 1; i <= num; i++) {
-    total *= i;
-   // console.log("total", total);
+function longestWord (str) {
+  str.replace(/[^a-zA-Z ]+/g, '');
+  var indStr = str.split(" ");
+  var output = 0;
+  var indexValue;
+  for(var i = 0; i < indStr.length; i++) {
+    if(indStr[i].length > output ) {
+      output = indStr[i].length;
+      indexValue = i;
+    }
   }
-  return total;
+  return indStr[indexValue];
 }
-
-console.log(factorial());
-
-
-
-
-
-
-// function factorial(num) {
-//   var total = 1;
-//   for (var i = 1; i <= num; i++) {
-//     total *= i;
-//    // console.log("total", total);
-//   }
-//   return total;
-// }
-
-// console.log(factorial(4));
-
-
-
-
+console.log(longestWord("Is this a sentence with punctuation?"));
