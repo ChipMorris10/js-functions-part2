@@ -3,7 +3,7 @@
 // Define a function called `oldestPerson` that takes an object with names as keys and ages as values (e.g., {'Chuck': 22, 'Brian': 46}), and then returns the name of the oldest living person.
 // Create a variable namesAndAges to hold the names and ages in an Ojbect
 // uncomment line 7
-// var namesAndAges = {Kelly: 19, Samantha: 32, Willy: 28};
+var namesAndAges = {Kelly: 19, Samantha: 32, Willy: 28};
 
 // Create a function that does two things:
 // 1. A variable oldestAge to hold the oldest person as the code iterates
@@ -15,19 +15,19 @@
 // after all keys have been evaluated, return the stored name
 
 // uncomment lines 18 - 30 for this to work
-// function oldestPerson(obj) {
-//   var oldestAge = 0;
-//   var name = "";
-//   for(key in obj) {
-//     if(obj[key] > oldestAge) {
-//       oldestAge = obj[key];
-//       name = key;
-//     }
-//   }
-//   return name;
-// }; //  End of code
+function oldestPerson(obj) {
+  var oldestAge = 0;
+  var name = "";
+  for(key in obj) {
+    if(obj[key] > oldestAge) {
+      oldestAge = obj[key];
+      name = key;
+    }
+  }
+  return name;
+}; //  End of code
 
-// console.log(oldestPerson(namesAndAges));
+console.log(oldestPerson(namesAndAges));
 
 
 
